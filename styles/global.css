@@ -5,18 +5,77 @@
 @tailwind utilities;
 
 .img-div .spinner {
-	color: white;
-	animation: 1s linear 0s infinite;
-	animation-name: spin;
-	animation-iteration-count:infinite;
+  color: white;
+  animation: 1s linear 0s infinite;
+  animation-name: spin;
+  animation-iteration-count: infinite;
 }
 
 @keyframes spin {
-	from {transform:rotate(0deg);}
-	to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .bg-yellow-400 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(251, 191, 36, var(--tw-bg-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(251, 191, 36, var(--tw-bg-opacity));
+}
+
+.socials {
+  background-color: white;
+  margin-bottom: -36px;
+  border-radius: 15px 15px 1px 1px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  transform: scale(1) translateY(0);
+}
+
+.socials:hover {
+  background-color: rgb(236, 236, 236);
+  transform: scale(1.05) translateY(-20px);
+}
+
+.socials:active {
+  background-color: rgb(211, 211, 211);
+}
+
+.twitter {
+  padding: 4px 6px 36px 6px;
+}
+
+.facebook {
+  padding: 4px 11px 36px 11px;
+}
+
+.socials i {
+  font-size: calc(50px);
+}
+
+.social-bar {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.ad {
+  display: none;
+}
+
+@media only screen and (orientation: landscape) {
+  .social-bar {
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+
+  .ad {
+    display: block;
+    text-decoration: underline;
+  }
 }
